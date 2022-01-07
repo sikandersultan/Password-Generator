@@ -93,7 +93,7 @@ function generatePassword () {
   console.log(choice)
 
   
-  
+  //this part is totally googled i barely understand it
   for (var i = 0; i < length; i++) {
     var createdPassword = choice[Math.floor(Math.random() * choice.length)]
 
