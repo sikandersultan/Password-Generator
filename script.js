@@ -45,60 +45,57 @@ function generatePassword () {
     characters = confirm("Would you like special characters in your password?")
   }
 
-  if (!lowerCase && !upperCase && !numbers && !specialChar) {
+  if (!lowerCase && !upperCase && !numbers && !characters) {
     choice = alert("I cant make you a password with literally nothing :|")
   }
-  else if (lowerCase && upperCase && numbers && characters) {
+    else if (lowerCase && upperCase && numbers && characters) {
     choice = lowerCaseChar.concat(upperCaseChar, numbersChar, specialChar)
   }
-  else if (lowerCase && upperCase && numbers) {
+    else if (lowerCase && upperCase && numbers) {
     choice = lowerCaseChar.concat(upperCaseChar, numbersChar)
   }
-  else if (lowerCase && upperCase && characters) {
+    else if (lowerCase && upperCase && characters) {
     choice = lowerCaseChar.concat(upperCaseChar, specialChar)
   }
-  else if (upperCase && numbers && characters) {
+    else if (upperCase && numbers && characters) {
     choice = upperCaseChar.concat(numbersChar, specialChar)
   }
-  else if (lowerCase && upperCase) {
+    else if (lowerCase && upperCase) {
     choice = lowerCaseChar.concat(upperCaseChar)
   }
-  else if (lowerCase && numbers) {
+    else if (lowerCase && numbers) {
     choice = lowerCaseChar.concat(numbersChar)
   }
-  else if (lowerCase && characters) {
+    else if (lowerCase && characters) {
     choice = lowerCaseChar.concat(specialChar)
   }
-  else if (upperCase && numbers) {
+    else if (upperCase && numbers) {
     choice = upperCaseChar.concat(numbersChar)
   }
-  else if (upperCase && characters) {
+    else if (upperCase && characters) {
     choice = upperCaseChar.concat(specialChar)
   }
-  else if (numbers && characters) {
+    else if (numbers && characters) {
     choice = specialChar.concat(numbersChar)
   }
-  else if (lowerCase) {
+    else if (lowerCase) {
     choice = lowerCaseChar
   }
-  else if (upperCase) {
+    else if (upperCase) {
     choice = upperCaseChar
   }
-  else if (numbers) {
+    else if (numbers) {
     choice = numbersChar
   }
-  else if (characters) {
+    else if (characters) {
     choice = specialChar
   }
-  console.log(choice)
-
-  
   //this part is totally googled i barely understand it
-  for (var i = 0; i < length; i++) {
+    for (var i = 0; i < length; i++) {
     var createdPassword = choice[Math.floor(Math.random() * choice.length)]
 
     console.log(createdPassword)
   }
-  var passwordText = createdPassword.join("");
-  return passwordText
 }
+
+ 
