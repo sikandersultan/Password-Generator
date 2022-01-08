@@ -1,7 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// for the random string of password
 var createdPassword;
+// to change the random string into a usable array 
+var createdPasswordArray = [];
 var length;
 var lowerCase;
 var upperCase;
@@ -36,7 +39,7 @@ function generatePassword () {
   alert("Please enter a value");
   }
   else if(length < 8 || length > 128) {
-    lenght = prompt("You must choose between 8 and 128");
+    length = prompt("You must choose between 8 and 128");
   }
   else {
     lowerCase = confirm("Would you like lowercase letters in your password?")
@@ -56,6 +59,9 @@ function generatePassword () {
   }
     else if (lowerCase && upperCase && characters) {
     choice = lowerCaseChar.concat(upperCaseChar, specialChar)
+  }
+    else if (lowerCase && numbers && characters) {
+    choice = lowerCaseChar.concat(numbersChar, specialChar)
   }
     else if (upperCase && numbers && characters) {
     choice = upperCaseChar.concat(numbersChar, specialChar)
@@ -94,10 +100,12 @@ function generatePassword () {
     for (var i = 0; i < length; i++) {
     var createdPassword = choice[Math.floor(Math.random() * choice.length)]
 
-    console.log(createdPassword)
+    createdPasswordArray.push(createdPassword)
+
   }
 
-  var password = createdPassword.join("")
+  var password = createdPasswordArray.join("")
+  console.log(password)
   return password
 }
 
