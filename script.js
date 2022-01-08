@@ -96,6 +96,9 @@ function generatePassword () {
 
     console.log(createdPassword)
   }
+
+  var password = createdPassword.join("")
+  return password
 }
 
  
